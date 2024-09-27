@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обработка ТХТ файла</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+</head>
+<body class="bg-gray-300 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-blue-100 text-blue-900 rounded-lg p-8 shadow-lg w-full max-w-4xl space-y-6">
+    <h5 class="text-3xl font-bold mb-4 text-center">Загрузите txt и xlsx файлы:</h5>
+    
+    <form action="" method="post" enctype="multipart/form-data" class="space-y-4">
+
+      <div class="flex flex-col">
+        <label for="txt-file" class="mb-2 text-lg font-semibold">Загрузите txt файл:</label>
+        <input id="txt-file" type="file" name="txt_file" class="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+      </div>
+
+      <div class="flex flex-col">
+        <label for="xlsx-file" class="mb-2 text-lg font-semibold">Загрузите xlsx файл:</label>
+        <input id="xlsx-file" type="file" name="xlsx_file" class="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+      </div>
+
+      <div class="text-center mt-6">
+        <input type="submit" value="Загрузить" class="px-6 py-2 bg-blue-600 text-gray-700 font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
